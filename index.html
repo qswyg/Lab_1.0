@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Лабораторна робота №1 - Кабінет студента</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Кабінет студента (Варіант №10)</h1>
+        </header>
+
+        <main class="main-layout">
+            
+            <section id="create-section">
+                <h2 id="form-title">Додати нотатку</h2>
+                
+                <form id="createForm" novalidate>
+                    
+                    <input type="hidden" id="edit-id">
+                    
+                    <div class="field">
+                        <label for="courseSelect">Навчальні Дисципліни</label>
+                        <select id="courseSelect">
+                            <option value="">Оберіть дисципліну</option>
+                            <option value="Спеціальні математичні методи">Спеціальні математичні методи в інформаційній та кібербезпеці</option>
+                            <option value="Архітектура комп'ютерних систем">Архітектура комп'ютерних систем</option>
+                            <option value="Математичні основи">Математичні основи в інформаційній та кібербезпеці</option>
+                            <option value="Основи алгоритмізації та програмування">Основи алгоритмізації та програмування</option>
+                        </select>
+                        <p id="courseError" class="error-text"></p>
+                    </div>
+
+                    <div class="field">
+                        <label for="titleInput">Назва нотатки</label>
+                        <input id="titleInput" type="text" placeholder>
+                        <p id="titleError" class="error-text"></p>
+                    </div>
+
+                    <div class="field">
+                        <label for="noteText">Текст нотатки</label>
+                        <textarea id="noteText" rows="4" placeholder ></textarea>
+                        <p id="noteError" class="error-text"></p>
+                    </div>
+
+                    <div class="buttons">
+                        <button type="submit" id="submitBtn" class="btn-submit">Зберегти нотатку</button>
+                        <button type="button" id="resetBtn" class="btn-clear">Очистити</button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="list-section">
+                <h2>Збережені нотатки</h2>
+                
+                <div class="toolbar">
+                    <input type="text" id="searchInput" placeholder="Пошук за назвою...">
+                    <button type="button" id="sortBtn">Сортувати (А-Я)</button>
+                </div>
+
+                <table id="itemsTable">
+                    <thead>
+                        <tr>
+                            <th>Дисципліна</th>
+                            <th>Назва</th>
+                            <th>Зміст</th>
+                            <th>Дії</th>
+                        </tr>
+                    </thead>
+                    <tbody id="itemsTableBody"></tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>

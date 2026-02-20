@@ -1,0 +1,184 @@
+
+html, body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #375c6b; 
+    margin: 0;
+    line-height: 1.5;
+}
+h1{
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main-layout {
+    display: flex;        
+    flex-wrap: wrap;       
+    gap: 20px;            
+    align-items: flex-start;
+}
+*
+section {
+    background: rgba(158, 189, 190, 0.9); 
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;              
+    min-width: 300px;
+}
+
+.field { margin-bottom: 15px; }
+.field label { display: block; font-weight: bold; margin-bottom: 5px; }
+.field input, .field select, .field textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+.field select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white; 
+    display: block;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #000000e3;
+}
+table td {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal; 
+    padding: 10px; /
+    vertical-align: top; 
+    border: 1px solid #ccc; 
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th { background: #eee; }
+
+.btn-submit {
+    background: #163b31;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-submit:hover {
+    background-color: #16c712;
+    cursor: pointer; 
+}
+.btn-clear{
+    background: rgb(83, 22, 22);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-clear:hover {
+    background-color: #f00101;
+    cursor: pointer; 
+}
+
+select.field-input, 
+#courseSelect {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.invalid {
+    border: 2px solid rgb(100, 10, 10) !important; 
+    background-color: #fff8f8;
+}
+
+.error-text {
+    color: rgb(98, 11, 11); 
+    font-size: 12px;
+    margin: 4px 0 0;
+    min-height: 14px;
+}
+м/* Основні стилі таблиці */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Рамки суміжні, а не подвійні */
+    margin-top: 15px;
+    background-color: #774058;
+}
+
+table th {
+    background-color: #f2f2f2; /* Світло-сірий фон */
+    color: #62274e;
+    font-weight: bold;
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+
+table td {
+    padding: 10px;
+    border: 1px solid #2e4166;
+    vertical-align: top; 
+}
+
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #223a54;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.edit-btn { background-color: #793859; color: #fcfbfb; } 
+.edit-btn:hover {
+    background-color: #e780ad;
+    cursor: pointer; 
+}
+.delete-btn { background-color: #52171d; color: #fff; } 
+.delete-btn:hover {
+    background-color: #f00101;
+    cursor: pointer; 
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#sortBtn {
+    padding: 8px 15px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#sortBtn:hover {
+    background-color: #2e4166;
+}
