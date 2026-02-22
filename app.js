@@ -71,8 +71,10 @@ function sortItems() {
 function validate(dto) {
     clearErrors();
     let valid = true;
-    if (!dto.course) { showError("courseSelect", "courseError", "Оберіть курс"); valid = false; }
+    if (!dto.course) { showError("courseSelect", "courseError", "Оберіть дисципліну"); valid = false; }
     if (dto.title.length < 3) { showError("titleInput", "titleError", "Мінімум 3 символи"); valid = false; }
+    if (dto.note.length<4){showError("noteText","noteError","Додайте текст до нотакти(мін. 5 символів)"); valid=false;}
+    
     return valid;
 }
 
@@ -112,6 +114,7 @@ function showError(inputId, errorId, msg) {
 }
 
 function clearErrors() {
-    ["courseSelect", "titleInput"].forEach(id => document.getElementById(id).classList.remove("invalid"));
-    ["courseError", "titleError"].forEach(id => document.getElementById(id).innerText = "");
+    ["courseSelect", "titleInput","noteText"].forEach(id => document.getElementById(id).classList.remove("invalid"));
+    ["courseError", "titleError","noteError"].forEach(id => document.getElementById(id).innerText = "");
+    
 }

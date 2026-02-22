@@ -118,12 +118,12 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
-    background-color: #774058;
+    background-color: rgba(157, 186, 187, 0.9);
 }
 
 table th {
     background-color: #f2f2f2;
-    color: #62274e;
+    color: #000000 ;
     font-weight: bold;
     padding: 12px;
     border: 1px solid #ccc;
