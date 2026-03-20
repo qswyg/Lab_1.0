@@ -1,0 +1,27 @@
+{
+  "name": "lab_1.0",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/qswyg/Lab_1.0#readme",
+  "bugs": {
+    "url": "https://github.com/qswyg/Lab_1.0/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qswyg/Lab_1.0.git"
+  },
+  "license": "ISC",
+  "author": "yeva",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
