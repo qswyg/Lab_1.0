@@ -1,0 +1,50 @@
+### Змінні (для зручності)
+@baseUrl = http://localhost:3001/api
+
+### 1. Отримати всі нотатки (Перевірка JOIN)
+# Тут ми побачимо, чи підтягуються назви категорій (categoryName)
+GET {{baseUrl}}/notes
+Accept: application/json
+
+
+###
+
+### 3. Реєстрація нового користувача (Перевірка 201 Created)
+
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "name": "new",
+    "email": "new123@gmail.com",
+    "createdAt": "2026-04-27T12:00:00Z"
+}
+
+### 4. Повторна реєстрація
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+      "name": "new",
+    "email": "new123@gmail.com",
+    "createdAt": "2026-04-27T12:00:00Z"
+}
+
+###
+
+### 5. Створення нотатки (Перевірка POST)
+POST {{baseUrl}}/notes
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "categoryId": 2,
+    "title": "Тестова нотатка",
+    "content": "Перевірка зв'язку з базою даних ",
+    "createdAt": "2026-04-26T20:00:00Z"
+}
+
+###
+
+### 6. Видалення нотатки (Перевірка DELETE)
+DELETE {{baseUrl}}/notes/20
